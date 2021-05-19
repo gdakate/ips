@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charse="utf-8">
+        <title>BUGSook</title>
+        <style>
+            input[id="menuicon"] {display:none;}
+            input[id="menuicon"] + label {display:block;margin:30px;width:60px;height:50px;position:relative;cursor:pointer;}
+            input[id="menuicon"] + label span {display:block;position:absolute;width:100%;height:5px;border-radius:30px;background:#000;transition:all .35s;}
+            input[id="menuicon"] + label span:nth-child(1) {top:0;}
+            input[id="menuicon"] + label span:nth-child(2) {top:50%;transform:translateY(-50%);}
+            input[id="menuicon"] + label span:nth-child(3) {bottom:0;}
+            input[id="menuicon"]:checked + label {z-index:2;}
+            input[id="menuicon"]:checked + label span {background:#fff;}
+            input[id="menuicon"]:checked + label span:nth-child(1) {top:50%;transform:translateY(-50%) rotate(45deg);}
+            input[id="menuicon"]:checked + label span:nth-child(2) {opacity:0;}
+            input[id="menuicon"]:checked + label span:nth-child(3) {bottom:50%;transform:translateY(50%) rotate(-45deg);}
+            div[class="sidebar"] {width:300px;height:100%;background:#222;position:fixed;
+            top:0;left:-300px;z-index:1;transition:all .35s; color:ivory; padding-top:15%;}
+            input[id="menuicon"]:checked + label + div {left:0;}
+            header[class="maintext"]{position:fixed; left:49%; top:1%; font-size:60px; font-style:bold;}
+            footer[class="tail"]{position:fixed; left:50%; top:90%; font-size:9px; text-align: center;}
+            </style>
+    </head>
+    <body>
+    
+        <header class="maintext">
+            <p>BUGSook</p>
+        </header>
+
+        <nav> <!--메뉴설정-->
+            <input type="checkbox" id="menuicon">
+            <label for="menuicon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div class="sidebar" >
+                <ul>메뉴1</ul>
+                <ul>메뉴2</ul>
+                <ul>메뉴3</ul>
+                <ul>메뉴4</ul>
+                <ul>메뉴5</ul>
+                <ul>메뉴6</ul>
+            </div>
+        </nav>
+
+        <article>
+           <form >
+              
+
+
+           </form>
+        </article>
+
+        <footer class="tail">
+            <p><br>COPYRIGHTⒸDevloading... All Rights Reserved</p>
+            <p>SMWU IPS</p>
+        </footer>
+        <script type="text/javascript">  
+            <button type="button" onclick="location.href='app.js' ">채팅</button></script>
+    </body>
+    
+</html>
